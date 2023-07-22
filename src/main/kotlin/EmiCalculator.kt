@@ -1,5 +1,17 @@
 import kotlin.math.pow
 
+fun main() {
+    val principal = 10000f
+    val rate = 10f
+    val time = 2f
+    val emi = calculateEmi(principal, rate, time)
+
+    println("Principal: $principal")
+    println("Interest: $rate")
+    println("Duration: $time years")
+    println("EMI: $emi")
+}
+
 // Function to calculate EMI
 private fun calculateEmi(
     principal: Float,
@@ -17,16 +29,4 @@ private fun calculateEmi(
                 / ((1 + _interest).toDouble().pow(_duration.toDouble()) - 1).toFloat())
 
     return emi
-}
-
-fun main() {
-    val principal = 10000f
-    val rate = 10f
-    val time = 2f
-    val emi = calculateEmi(principal, rate, time)
-
-    println("Principal: $principal")
-    println("Interest: $rate")
-    println("Duration: $time years")
-    println("EMI: $emi")
 }
