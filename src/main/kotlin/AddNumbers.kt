@@ -10,6 +10,7 @@ fun main() {
     println("Sum: $sum")
 }
 
+// Dummy comment
 private fun sum(
     number1: Int,
     number2: Int
